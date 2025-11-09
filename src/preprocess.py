@@ -2,6 +2,8 @@ from PIL import Image
 import torch
 from torchvision import transforms
 from torchvision.transforms import InterpolationMode
+import pillow_heif
+pillow_heif.register_heif_opener()
 
 # Misma transformación que se usó para entrenar el modelo
 TF = transforms.Compose([
