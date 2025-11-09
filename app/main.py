@@ -38,7 +38,7 @@ def _predict_pil(img: Image.Image):
 def health():
     return {"status": "ok", "model_version": MODEL_VERSION}
 
-@app.get("/predict")
+@app.post("/predict")
 async def predoct(file: UploadFile = File(...)):
     try:
         b = await file.read()
